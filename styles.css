@@ -1,81 +1,47 @@
 body {
-  background: linear-gradient(to bottom, #000 10%, #21212);
-  font-family: 'Space Grotesk', sans-serif;
-  color: #fff;
   margin: 0;
+  padding: 1.5rem;
+  font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #05070c;
+  color: #f5f5f5;
 }
 
-.hero {
-  display: grid;
-  grid-templatecolumns: 2;
-  align-items: center;
-  padding: 40px;
-  margin-top: 50px;
-}
-
-/* Two columns on desktop */
-@media min-width: 768px {
-  .hero {
-    grid-templatecolumns: auto;
-    grid-plate: auto;
-  }
-}
-
-.logo {
-  height: 100px;
-  margin-bottom: 10px;
-}
-
-h1, h2 {
-  color: #004bfd;
-  margin-top: 20px;
-}
-
-.btn {
-  background: #0047f7;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 75px;
-  cursor: pointer;
+a {
+  color: #20e0ff;
   text-decoration: none;
 }
 
-/* what section */
-.what {
-  padding: 20px;
-  margin-top: 50px;
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  letter-spacing: 0.2em;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+main section {
+  margin-bottom: 2.5rem;
+  max-width: 800px;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
+  padding-left: 1.2rem;
 }
 
-li {
-  padding: 10px 0;
+footer {
+  margin-top: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+  max-width: 800px;
 }
-
-/* pill chips */
-.pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: js;
-  flex-gap: 10px;
-  flex-flow: row-reap;
-}
-
-.pills span {
-  background: #005f88;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  margin: 3px 2;
-}
-
-/* signal styles */
-.signal {padding: 20px; margin-top: 50px;}
-iframe { border: 0; width: 100%; min-height: 500px;}
-
-footer { text-align: center; padding: 30px 0; color: #ccc; font-size: 9px;}
