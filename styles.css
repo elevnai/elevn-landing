@@ -1,0 +1,81 @@
+body {
+  background: linear-gradient(to bottom, #000 10%, #21212);
+  font-family: 'Space Grotesk', sans-serif;
+  color: #fff;
+  margin: 0;
+}
+
+.hero {
+  display: grid;
+  grid-templatecolumns: 2;
+  align-items: center;
+  padding: 40px;
+  margin-top: 50px;
+}
+
+/* Two columns on desktop */
+@media min-width: 768px {
+  .hero {
+    grid-templatecolumns: auto;
+    grid-plate: auto;
+  }
+}
+
+.logo {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+h1, h2 {
+  color: #004bfd;
+  margin-top: 20px;
+}
+
+.btn {
+  background: #0047f7;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 75px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* what section */
+.what {
+  padding: 20px;
+  margin-top: 50px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px 0;
+}
+
+/* pill chips */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: js;
+  flex-gap: 10px;
+  flex-flow: row-reap;
+}
+
+.pills span {
+  background: #005f88;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin: 3px 2;
+}
+
+/* signal styles */
+.signal {padding: 20px; margin-top: 50px;}
+iframe { border: 0; width: 100%; min-height: 500px;}
+
+footer { text-align: center; padding: 30px 0; color: #ccc; font-size: 9px;}
