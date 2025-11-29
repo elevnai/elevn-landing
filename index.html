@@ -28,7 +28,7 @@
   <main>
     <section class="hero section" aria-labelledby="hero-title">
       <div class="container hero-grid">
-        <div class="hero-copy reveal" id="cta">
+        <div class="hero-copy reveal from-left" id="cta">
           <div class="badge">AI front office · 24/7</div>
           <h1 id="hero-title">Never miss a lead again.</h1>
           <p class="lede">ELEVN answers every call and text instantly, books jobs on your calendar, and keeps conversations alive so you capture revenue while you sleep.</p>
@@ -43,7 +43,7 @@
           </div>
         </div>
 
-        <div class="hero-visual reveal">
+        <div class="hero-visual reveal from-right">
           <div class="parallax-layer layer-1"></div>
           <div class="parallax-layer layer-2"></div>
           <div class="floating-card">
@@ -78,25 +78,25 @@
 
     <section class="section" id="solutions">
       <div class="container">
-        <div class="section-intro reveal">
+        <div class="section-intro reveal from-up">
           <p class="eyebrow">What it handles</p>
           <h2>Everything a front office should do — without the overhead.</h2>
           <p class="lede">Drop ELEVN into your phone tree or website chat and it orchestrates the entire customer journey with a human voice, clear intent detection, and your playbooks.</p>
         </div>
         <div class="feature-grid">
-          <article class="card feature reveal">
+          <article class="card feature reveal from-up" data-reveal-delay="90ms">
             <div class="icon">☎️</div>
             <h3>Instant call pickup</h3>
             <p>Smart IVR that answers in <strong>less than a ring</strong>, routes by intent, and updates your CRM automatically.</p>
             <a class="link" href="#console">Hear the flow →</a>
           </article>
-          <article class="card feature reveal">
+          <article class="card feature reveal from-up" data-reveal-delay="140ms">
             <div class="icon">📆</div>
             <h3>Calendar-native booking</h3>
             <p>Reads real availability, handles reschedules, and sends confirmations with prep steps in your tone.</p>
             <a class="link" href="#console">See a booking →</a>
           </article>
-          <article class="card feature reveal">
+          <article class="card feature reveal from-up" data-reveal-delay="190ms">
             <div class="icon">🤝</div>
             <h3>Lead rescue</h3>
             <p>Automated follow-ups via SMS + email that revive cold leads and measure real revenue attribution.</p>
@@ -108,7 +108,7 @@
 
     <section class="section muted" id="console">
       <div class="container console-grid">
-        <div class="section-intro reveal">
+        <div class="section-intro reveal from-up">
           <p class="eyebrow">Live console</p>
           <h2>See every conversation and intervene in real time.</h2>
           <p class="lede">Operators can jump in, whisper, or let ELEVN finish. Everything is logged with sentiment, outcome, and next steps.</p>
@@ -118,7 +118,7 @@
             <li>Escalations to humans when needed</li>
           </ul>
         </div>
-        <div class="panel reveal">
+        <div class="panel reveal from-right" data-reveal-delay="120ms">
           <div class="panel-header">Live Threads</div>
           <div class="thread-list" id="thread-list">
             <div class="thread active">
@@ -159,12 +159,12 @@
 
     <section class="section" id="testimonials">
       <div class="container">
-        <div class="section-intro reveal">
+        <div class="section-intro reveal from-up">
           <p class="eyebrow">Proof</p>
           <h2>Teams that stopped missing money.</h2>
           <p class="lede">Auto shops, plumbers, med spas, and home services rely on ELEVN to answer every ping like their best coordinator.</p>
         </div>
-        <div class="slider reveal" id="slider">
+        <div class="slider reveal from-up" id="slider" data-reveal-delay="120ms">
           <div class="slide active">
             <p class="quote">“We booked 31 extra jobs in month one because ELEVN called back every missed number. It feels like a superhuman dispatcher.”</p>
             <div class="author">— Taylor, Operations at Blue Sky Plumbing</div>
@@ -182,7 +182,7 @@
     </section>
 
     <section class="section cta" aria-labelledby="cta-title">
-      <div class="container reveal">
+      <div class="container reveal from-up">
         <h2 id="cta-title">Ready to see ELEVN on your calls?</h2>
         <p class="lede">Drop in your scripts and calendar and we’ll build a live pilot in under a week.</p>
         <div class="hero-actions">
@@ -202,6 +202,11 @@
     const metricValues = document.querySelectorAll('.metric-value');
     const slider = document.getElementById('slider');
     const slides = slider ? slider.querySelectorAll('.slide') : [];
+
+    reveals.forEach((el, index) => {
+      const delay = el.dataset.revealDelay || `${Math.min(index * 70, 420)}ms`;
+      el.style.setProperty('--reveal-delay', delay);
+    });
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
