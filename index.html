@@ -4,8 +4,295 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ELEVN | AI Front Office Assistant for Local Service Businesses</title>
-  <meta name="description" content="ELEVN is an AI front office assistant that answers calls and texts, books jobs, and follows up with your leads so you stop losing money to missed inaquiries." />
+  <meta name="description" content="ELEVN is an AI front office assistant that answers calls and texts, books jobs, and follows up with your leads so you stop losing money to missed inquiries." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>New Version</body>
+<body>
+  <div class="scroll-progress"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <div class="logo">ELEVN</div>
+      <nav class="nav-links">
+        <a href="#solutions">Solutions</a>
+        <a href="#console">Live console</a>
+        <a href="#testimonials">Proof</a>
+        <a href="#cta" class="pill">Book a demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal" id="cta">
+          <div class="badge">AI front office · 24/7</div>
+          <h1 id="hero-title">Never miss a lead again.</h1>
+          <p class="lede">ELEVN answers every call and text instantly, books jobs on your calendar, and keeps conversations alive so you capture revenue while you sleep.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#console">See it work</a>
+            <a class="btn ghost" href="#solutions">What it handles</a>
+          </div>
+          <div class="hero-pills">
+            <span>Call & text routing</span>
+            <span>Booking automation</span>
+            <span>Follow-up cadences</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="parallax-layer layer-1"></div>
+          <div class="parallax-layer layer-2"></div>
+          <div class="floating-card">
+            <div class="card-header">
+              <span class="dot online"></span>
+              <span>Live console</span>
+              <span class="status">Online</span>
+            </div>
+            <div class="console" id="live-console">
+              <div class="console-line">Customer: "Can you do a drain clean on Friday?"</div>
+              <div class="console-line typewriter" data-text="ELEVN: Absolutely. I can book you for Friday at 2:30 PM with Sam. Does that work?" aria-live="polite"></div>
+              <div class="console-line pending">Typing...</div>
+            </div>
+            <div class="metrics">
+              <div>
+                <div class="metric-value" data-count="98">0%</div>
+                <div class="metric-label">Lead capture</div>
+              </div>
+              <div>
+                <div class="metric-value" data-count="37">0</div>
+                <div class="metric-label">Bookings/week</div>
+              </div>
+              <div>
+                <div class="metric-value" data-count="12">0m</div>
+                <div class="metric-label">Avg response</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="solutions">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow">What it handles</p>
+          <h2>Everything a front office should do — without the overhead.</h2>
+          <p class="lede">Drop ELEVN into your phone tree or website chat and it orchestrates the entire customer journey with a human voice, clear intent detection, and your playbooks.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="card feature reveal">
+            <div class="icon">☎️</div>
+            <h3>Instant call pickup</h3>
+            <p>Smart IVR that answers in <strong>less than a ring</strong>, routes by intent, and updates your CRM automatically.</p>
+            <a class="link" href="#console">Hear the flow →</a>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon">📆</div>
+            <h3>Calendar-native booking</h3>
+            <p>Reads real availability, handles reschedules, and sends confirmations with prep steps in your tone.</p>
+            <a class="link" href="#console">See a booking →</a>
+          </article>
+          <article class="card feature reveal">
+            <div class="icon">🤝</div>
+            <h3>Lead rescue</h3>
+            <p>Automated follow-ups via SMS + email that revive cold leads and measure real revenue attribution.</p>
+            <a class="link" href="#console">Watch the nudge →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="console">
+      <div class="container console-grid">
+        <div class="section-intro reveal">
+          <p class="eyebrow">Live console</p>
+          <h2>See every conversation and intervene in real time.</h2>
+          <p class="lede">Operators can jump in, whisper, or let ELEVN finish. Everything is logged with sentiment, outcome, and next steps.</p>
+          <ul class="bullets">
+            <li>Type-ahead suggestions and macros</li>
+            <li>Dynamic price quoting and deposits</li>
+            <li>Escalations to humans when needed</li>
+          </ul>
+        </div>
+        <div class="panel reveal">
+          <div class="panel-header">Live Threads</div>
+          <div class="thread-list" id="thread-list">
+            <div class="thread active">
+              <div>
+                <div class="thread-name">New customer · Voice</div>
+                <div class="thread-snippet">"Do you service North Austin?"</div>
+              </div>
+              <span class="pill soft">Active</span>
+            </div>
+            <div class="thread">
+              <div>
+                <div class="thread-name">Lead nurture · SMS</div>
+                <div class="thread-snippet">"Ready to schedule this week."</div>
+              </div>
+              <span class="pill">Won</span>
+            </div>
+            <div class="thread">
+              <div>
+                <div class="thread-name">Repeat client · Chat</div>
+                <div class="thread-snippet">"Need a tune-up before Friday."</div>
+              </div>
+              <span class="pill danger">Urgent</span>
+            </div>
+          </div>
+          <div class="live-window">
+            <div class="message from">Customer: "Can you come tomorrow at 9am?"</div>
+            <div class="message ai">ELEVN: "I have a 9:30am arrival. I can also hold 8:45am if I move a flexible job. Which do you prefer?"</div>
+            <div class="message typing">ELEVN is typing</div>
+            <div class="controls">
+              <button class="btn small">Jump in</button>
+              <button class="btn small ghost">Whisper</button>
+              <button class="btn small ghost">Record outcome</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-intro reveal">
+          <p class="eyebrow">Proof</p>
+          <h2>Teams that stopped missing money.</h2>
+          <p class="lede">Auto shops, plumbers, med spas, and home services rely on ELEVN to answer every ping like their best coordinator.</p>
+        </div>
+        <div class="slider reveal" id="slider">
+          <div class="slide active">
+            <p class="quote">“We booked 31 extra jobs in month one because ELEVN called back every missed number. It feels like a superhuman dispatcher.”</p>
+            <div class="author">— Taylor, Operations at Blue Sky Plumbing</div>
+          </div>
+          <div class="slide">
+            <p class="quote">“Our front desk was drowning. ELEVN routes calls, collects deposits, and our CSAT went up because response times dropped to seconds.”</p>
+            <div class="author">— Mia, Owner at Glow Med Spa</div>
+          </div>
+          <div class="slide">
+            <p class="quote">“ELEVN knows our promos, pricing, and tech schedules. Customers think it’s a real coordinator — and honestly, it is.”</p>
+            <div class="author">— Jorge, GM at Urban HVAC</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta" aria-labelledby="cta-title">
+      <div class="container reveal">
+        <h2 id="cta-title">Ready to see ELEVN on your calls?</h2>
+        <p class="lede">Drop in your scripts and calendar and we’ll build a live pilot in under a week.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="mailto:hello@elevn.ai">Book a demo</a>
+          <a class="btn ghost" href="#top">Back to top</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const nav = document.querySelector('.nav');
+    const progress = document.querySelector('.scroll-progress');
+    const reveals = document.querySelectorAll('.reveal');
+    const typewriterLine = document.querySelector('.typewriter');
+    const pendingLine = document.querySelector('.console-line.pending');
+    const metricValues = document.querySelectorAll('.metric-value');
+    const slider = document.getElementById('slider');
+    const slides = slider ? slider.querySelectorAll('.slide') : [];
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(el => observer.observe(el));
+
+    // Scroll progress & sticky nav shrink
+    const updateProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progressWidth = (scrollTop / docHeight) * 100;
+      progress.style.width = `${progressWidth}%`;
+      nav.classList.toggle('scrolled', scrollTop > 24);
+    };
+    document.addEventListener('scroll', updateProgress);
+    updateProgress();
+
+    // Typewriter effect
+    const runTypewriter = () => {
+      if (!typewriterLine) return;
+      const text = typewriterLine.dataset.text;
+      typewriterLine.textContent = '';
+      pendingLine.style.opacity = 1;
+      let i = 0;
+      const speed = 22;
+      const step = () => {
+        if (i <= text.length) {
+          typewriterLine.textContent = text.slice(0, i);
+          i++;
+          requestAnimationFrame(step);
+        } else {
+          pendingLine.style.opacity = 0.3;
+          setTimeout(runTypewriter, 4000);
+        }
+      };
+      setTimeout(step, 400);
+    };
+    runTypewriter();
+
+    // Metric counters
+    metricValues.forEach(el => {
+      const target = Number(el.dataset.count);
+      const isPercent = el.textContent.includes('%');
+      let current = 0;
+      const increment = target / 80;
+      const tick = () => {
+        current += increment;
+        if (current >= target) current = target;
+        const display = isPercent ? `${Math.round(current)}%` : target === 12 ? `${Math.round(current)}m` : Math.round(current);
+        el.textContent = display;
+        if (current < target) requestAnimationFrame(tick);
+      };
+      tick();
+    });
+
+    // Slider auto-advance
+    let slideIndex = 0;
+    const activateSlide = (index) => {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+    };
+    const cycleSlides = () => {
+      if (!slides.length) return;
+      slideIndex = (slideIndex + 1) % slides.length;
+      activateSlide(slideIndex);
+    };
+    setInterval(cycleSlides, 4600);
+
+    // Parallax movement
+    const layers = document.querySelectorAll('.parallax-layer');
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 12;
+      const y = (e.clientY / window.innerHeight - 0.5) * 12;
+      layers.forEach((layer, i) => {
+        const depth = (i + 1) * 6;
+        layer.style.transform = `translate3d(${x / depth}px, ${y / depth}px, 0)`;
+      });
+    });
+
+    // Cursor trail glow
+    const glow = document.createElement('div');
+    glow.className = 'cursor-glow';
+    document.body.appendChild(glow);
+    document.addEventListener('pointermove', (e) => {
+      glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+  </script>
+</body>
 </html>
